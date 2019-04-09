@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"><script src="jquery.ckLine.js"></script>
+    <title>E Summit 2k19</title>
+	<link rel="icon" href="img/core-img/favicon.png">
+
+	
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Audiowide|Arvo|Exo|Kanit|Raleway" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-height: 100vh;
+            position: relative;
+            font-family: sans-serif;
+            font-size: 18px;
+            background: linear-gradient(141deg, #764ba2 0%, #667eea 51%, #764ba2 75%);
+            overflow: hidden;
+        }
+
+        #ckLine {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .txt {
+            width: 40%;
+            height: 200px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            z-index: 10;
+            background-color: rgba(57, 92, 105, 0.72);
+        }
+
+        .txt h1,
+        .txt p,
+        .txt a {
+            text-align: center;
+            color: #fff;
+        }
+        .txt h1 {
+            margin: 0;
+        }
+        .txt p {
+            font-size: 1em;
+        }
+
+        .txt a {
+            text-decoration: none;
+        }
+
+        .txt a:hover {
+            text-decoration: underline;
+        }
+
+        .txt>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+		  #logo {
+  position:absolute;
+  top: 5%;
+  left: 32%;
+  color: #fff;
+  z-index: 9999;
+  
+}
+.middle {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  
+}
+
+	
+	.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+
+ #social {
+  position:absolute;
+  top: 37%;
+  right: 7%;
+  color: #fff;
+  z-index: 9999;
+  
+}
+
+.responsive {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+}
+
+@media screen and (max-width: 999px){
+  #logo{
+    width: 80%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 640px){
+  #logo{
+    width: 80%;
+    left: 10%;
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 320px){
+  #logo{
+    width: 80%;
+    left: 15%;
+    top: 13%;
+  }
+  #social{
+  	right: 3%;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+<div id="logo">
+			<img src="logo.png" class="responsive" height="200" width="550">
+		</div>
+		
+	<div class="middle">
+	<br> <br>
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+
+	<a href="index.html" class="button">Go Back</a>
+  </div>
+  
+  <div class="bottomleft">
+    <p><font size="6" style="font-family: 'Audiowide', cursive;"><font color="#f00">GIIEC </font> presents E-Summit 2019</font></p>
+	<br>
+	</div>
+  
+<div id="social">	
+<a href="https://www.facebook.com/ecell.hbtuk/" > <img src="facebook-Icon.png"></a>
+<br>
+<br>
+<a href="https://www.instagram.com/ecellhbtu/" > <img src="Instagram-Icon.png"></a>
+<br>
+<br>
+<a href="https://www.linkedin.com/company/entrepreneurship-cell-hbtu-kanpur/?originalSubdomain=in" > <img src="Linkedin.png"></a>
+</div>
+    
+    <div>
+        <svg id="ckLine" xmlns="http://www.w3.org/2000/svg" width="1000" height="1000"></svg>
+    </div>
+    <script>
+        $('#ckLine').ckLine({
+            leftRight: false,
+            strokeColor: 'rgba(255,255,255,0.4)',
+            interval: 800,
+            animateTime: 1600,
+            animationTimeRange: [800, 1600]
+        });
+
+    
+
+var countDownDate = new Date("Apr 9, 2019 10:37:25").getTime();
+
+
+var countdownfunction = setInterval(function() {
+
+  var now = new Date().getTime();
+  
+ var distance = countDownDate - now;
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+
+</html>

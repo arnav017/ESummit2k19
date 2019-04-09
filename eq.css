@@ -1,0 +1,13 @@
+#idea_workshop{
+	background-image: url("images/eq.jpg");
+	background-attachment: fixed;
+	z-index: -1;
+	padding: 200px;
+	padding-left: 300px;
+	border-radius: 15px;
+}
+.main{
+  font-size: 3em;
+  color: rgb(8,2,30);
+  padding-bottom: 30px;
+}

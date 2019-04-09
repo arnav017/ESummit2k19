@@ -1,0 +1,57 @@
+h1{
+	color: #D23333;
+	font-family: 'Roboto Mono', monospace;
+	margin-left: 100px;
+	letter-spacing: 10px; 
+	font-size: 5em;
+}
+body{
+	background-color: #343434;
+}
+h2{
+	color: #006A9C;
+}
+.image{
+	width: 1000px;
+	height: 400px;
+	margin-left: 200px;
+}
+.register{
+	padding: 30px;
+	max-width: 600px;
+	height: 100%;
+	margin-left: 380px;
+	margin-top: 70px;
+	background-color: rgba(211,211,211,0.5);
+	border-radius: 5px;
+}
+p{
+	font-size: 20px;
+	color: #006A9C;
+	margin-left: 100px;
+}
+@media screen and (max-width: 999px){
+	h1{
+		width: 100%;
+	}
+	.register{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 640px){
+	h1{
+		width: 100%;
+	}
+	.register{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 320px){
+	h1{
+		width: 100%;
+	}
+	.register{
+		width: 100%;
+		margin-left: 200px;
+	}
+}

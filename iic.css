@@ -1,0 +1,9 @@
+#startup{
+	background-image: url("images/inc1.png");
+	background-size: cover;
+	border-radius: 15px;
+	background-attachment: fixed;
+	z-index: -1;
+	margin-top: 30px;
+	font-family: 'Allerta Stencil', sans-serif;
+}

@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>The Team</title>
+
+    <!-- Favicon -->
+   <link rel="icon" href="img/core-img/favicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+	
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Audiowide|Arvo|Exo|Kanit|Raleway" rel="stylesheet">
+	<style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+					
+		.blinking{
+    animation:blinkingText 1.5s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #fff;    }
+    49%{    color: #D23333; }
+    50%{    color: #D23333; }
+    99%{    color: #fff;  }
+    100%{   color: #fff;    }
+}
+.blinking1{
+    animation:blinkingText1 1.5s infinite;
+	}
+	@keyframes blinkingText1{
+    0%{     color: #000;    }
+    49%{    color: #D23333; }
+    50%{    color: #D23333; }
+    99%{    color: #000;  }
+    100%{   color: #000;    }
+} 
+#grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+}
+h1{
+  font-size: 1.5em;
+  color: rgb(8,2,30);
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.column1 {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  }
+.container {
+  padding: 0 16px;
+  color: black;
+  
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+.title {
+  color: grey;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover {
+  background-color: #555;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.but {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.imgside {
+    position: relative;
+    width:300px;
+  height: 200px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.imgside:hover .image {
+  opacity: 0.4;
+}
+.imgside:hover .middle {
+  opacity: 1;
+}
+.text {
+  color: black;
+  
+  
+}
+.main{
+  color: white;
+  font-size: 3em;
+}
+#nav{
+  margin-left: 100px;
+  width: 1100px;
+  margin-bottom: 3em;
+  border-radius: 15px;
+}
+.foot{
+  background-color: black;
+  color: white;
+  width: 1350px;
+  height: 50px;
+  font-family: 'Times New Roman';
+  padding-left: 600px;
+  padding-top: 4px;
+}
+.image3{
+  width:50px;
+  height:50px;
+}
+.image1{
+  width:40px;
+  height:30px;
+  padding-right: 10px;
+}
+.image2{
+  width:40px;
+  height:40px;
+}
+.footer{
+  margin-left: 100px;
+  margin-top: 3em;
+  color: green;
+}
+.connect{
+  padding-left: 10px;
+}
+#team{
+  background-image: url("images/team.jpg");
+  background-size: cover;
+  padding: 200px;
+  padding-left: 600px;
+  color: white;
+  border-radius: 15px;
+  background-attachment: fixed;
+  z-index: -1;
+}
+.heading{
+  font-size: 2em;
+}
+@media screen and (max-width:640px){
+  img{
+    width: 100%;
+  }
+} 
+@media screen and (max-width:320px){
+  img{
+    width: 100%;
+  }
+} 
+
+
+</style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.html#vision">Our Vision</a></li>
+                                    <li><a href="index.html#archives"> Archives</a></li>
+                                    <li><a href="index.html#upcoming">Upcoming Events</a></li>
+									<li><a href="team.html">The Team</a></li>
+									<li><a href="summit.html"><span class="blinking">E-Summit</span></a></li>
+                                    <li><a href="index.html#contact">Contact</a></li>
+                                </ul>
+
+                                                                  
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/team.png);">
+        <div class="bradcumbContent">
+            <p></p>
+            <h2><font style="font-family: 'Raleway'">O U R &nbsp;  T E A M </font></h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+	</a></li
+	
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100-0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="row">
+  <div class="column">
+ <div class="card">
+ <div class="form-group wow fadeInUp" data-wow-delay="100ms">
+  <img src="assets\images\harshit_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1>Harshit Tripathi</h1>
+  <p class="title">President</p>
+  <p>3 rd BTECH</p>
+  <a href="https://bit.ly/2MJ4wDD"><i class="fa fa-linkedin" style="color:blue" ></i></a> &nbsp;&nbsp;
+   
+  <p><button class="but">Contact</button></p>
+  </div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="card">
+<div class="form-group wow fadeInUp" data-wow-delay="100ms">
+  <img src="assets\images\vishal_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+ <h1>Vishal Gupta</h1>
+  <p class="title">Vice-President</p>
+  <p>3 rd BTECH</p>
+  <a href="https://www.linkedin.com/in/vishal-gupta-48220b150"><i class="fa fa-linkedin" style="color:blue"></i></a> 
+ 
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br><br><br><br>
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;"> Web and App Development</font> </center></h1>
+
+
+
+<div class="card">
+<div class="form-group wow fadeInUp" data-wow-delay="100ms">
+  <img src="assets/images/arnav_sir.jpeg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1> Arnav Srivastava </h1>
+  <p class="title">Head:- Web and App </p>
+  <p>3 rd BTECH</p>
+  <a href="https://www.linkedin.com/in/arnav-srivastava-85bb68126"><i class="fa fa-linkedin" style="color:blue"></i></a> &nbsp;&nbsp;
+  
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+</div>
+<br>
+<div class="row">
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets/images/harsh.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Harsh Yadav</b> <br><br>
+	Back End Developer
+	<br>
+<br>
+    
+    <center>
+    <a href="https://www.linkedin.com/in/harsh-yadav-56286014b/"><i class="fa fa-linkedin" style="color:blue"style="color:white">&nbsp;&nbsp;</i></a> 
+  
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="column">
+    <div class="imgside">
+  <img src="assets\images\ayush.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Ayush Kumar</b> <br><br> 
+  Front End Developer  
+  <br>
+<br>
+    
+    <center>
+    <a href="https://www.linkedin.com/in/ayush-kumar-2476b716b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+  
+    </center>
+    </div>
+  </div>   
+    </div>
+  </div>
+
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\yashveer.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Yashveer Talan</b> <br><br>
+  Back End Developer
+  <br>
+<br>
+    
+    <center>
+    <a href="https://www.linkedin.com/in/yashveer-talan-41104216b"><i class="fa fa-linkedin" style="color:blue""style="color:white">&nbsp;&nbsp;</i></a> 
+  
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+  
+  <br>
+  <br><br><br>
+  <h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;"> HOSPITALITY</font> </h1></center>
+  
+ 
+<div class="card">
+  <img src="assets\images\praful_sir.jpg" alt="Praful" style="width:100%">
+  <div class="container">
+  <h1>Praful Chauhan</h1>
+  <p class="title">Head:- Hospitality</p>
+  <p>3 rd BTECH</p>
+  <a href="https://www.linkedin.com/in/praful-chauhan-9701a5162"><i class="fa fa-linkedin" style="color:blue""></i></a> &nbsp;&nbsp;
+  <a href="#"></a> 
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+
+<div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\shresth.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shresth Gupta</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/shresth-gupta-87322116b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+
+<div class="column">
+    <div class="imgside">
+  <img src="assets\images\himanshi.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Himanshi Paliwal</b> <br><br> 
+
+    
+    <center>
+    <a href="https://www.linkedin.com/in/himanshi-paliwal-b1a8a016a"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a>  
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+
+
+
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\vaishali.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Vaishali Baghel</b> <br><br> 
+
+    
+    <center>
+    <a href="https://www.linkedin.com/in/vaishali-baghel-343a0916b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+  
+  
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+</div>
+<br><br>
+ <div class="row justify-content-md-center">
+ <div class="column">
+    <div class="imgside">
+  <img src="assets\images\shivam_verma.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shivam Verma</b> <br><br> 
+
+    
+    <center>
+    <a href="https://www.linkedin.com/in/himanshi-paliwal-b1a8a016a"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a>  
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<br>
+<br>
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;">Events</font></h1></center>
+<br>
+<div class="card">
+  <img src="assets\images\tanul_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1>Tanul Singh</h1>
+  <p class="title">Head:- Events</p>
+  <p>3 rd BTECH </p>
+  <a href="#"><i class="fa fa-linkedin" style="color:blue""></i></a> &nbsp;&nbsp;
+  <a href="#"></a> 
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+<div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\aman.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Aman Gupta</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/aman-g-18286a14b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+  </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  <div class="column">
+    <div class="imgside">
+  <img src="assets\images\aishwarya.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Aishwarya Dwivedi</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+<div class="column">
+    <div class="imgside">
+  <img src="assets\images\manvendra.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Manvendra</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/tripti-gupta-71875b170"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+  </div>
+<br>
+<br>
+  <div class="row justify-content-md-center">
+    <div class="column">
+    <div class="imgside">
+  <img src="assets\images\utkarsh.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Utkarsh</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/utkarsh-srivastava-1ab29816b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="column">
+    <div class="imgside">
+  <img src="assets\images\2.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Aviral Verma</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/utkarsh-srivastava-1ab29816b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="column">
+    <div class="imgside">
+  <img src="assets\images\shashank.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shashank Shukla</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/utkarsh-srivastava-1ab29816b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+    <div class="row row justify-content-md-center">
+   <div class="column">
+      
+       <div class="imgside">
+  <img src="assets\images\tanisha.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Tanisha</b> <br><br> 
+    
+    <center>
+    <a href="https://www.linkedin.com/in/tanisha-mehrotra-78062116b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+
+  </div>
+
+   <div class="column">
+      
+       <div class="imgside">
+  <img src="assets\images\nancy.png" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Nancy</b> <br><br> 
+    
+    <center>
+    <a href=""><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+    </center>
+       </div>
+  </div>
+  </div>
+
+  </div>
+</div>
+<br>
+<br>
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;">Marketing</font></h1></center>
+<div class="card">
+  <img src="assets\images\puru_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1>Puru Bhatnagar</h1>
+  <p class="title">Marketing</p>
+  <p>3 rd BTECH</p>
+  <a href="https://www.linkedin.com/in/puru-bhatnagar-482a04129"><i class="fa fa-linkedin" style="color:blue"" style="color:blue"></i></a> &nbsp;&nbsp;
+ 
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\ankur.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Anjaney Basedia</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/ankur-basedia-074545143"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\shubhangi.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shubhangi Singh</b> <br><br> 
+    <center>
+    <a href="linkedin.com/in/shubhangi-singh-8037b916b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+  
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\sudanshu.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Sudhanshu Tiwari</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/sudhanshu-tiwari-bb0942145"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+ <div class="column"></div>
+  </div>
+  <div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\kanishk.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Kanishk K Burman</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/kanishk-burman-b47701147"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\saloni.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Saloni Maurya</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/kanishk-burman-b47701147"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\divya.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Divya Mishra</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/divya-m-941a4b14b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+  
+  </div>
+ 
+ <br>
+ <div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\irvin_mam.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Irvin Kaur</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/kanishk-burman-b47701147"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\chitiz.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Chitiz Pachori</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/kanishk-burman-b47701147"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+</div>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<br>
+<br>
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;">FINANCE </font></center></h1>
+<br>
+<div class="card">
+  <img src="assets\images\kartikey_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1>Kartikeya Jain</h1>
+  <p class="title">Head:- Finance</p>
+  <p>3 rd BTECH </p>
+  <a href="https://www.linkedin.com/in/kartikeya-jain-b656a216b"><i class="fa fa-linkedin" style="color:blue"></i></a>  &nbsp;&nbsp;
+  
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\prakhar.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Prakhar Tiwari</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/prakhar-tiwari-061280157"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\hardik.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Hardik Kumar Chauhan</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/hardik-kumar-chauhan-b1371a16b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\ravinder.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Ravinder Singh</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/ravinder-singh-755269151/"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+<br><br><br><br>
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;">Logistics </font></h1></center>
+
+<div class="card">
+  <img src="assets\images\naman_sir.jpeg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1>Naman Kumar</h1>
+  <p class="title">Head:- Logistics</p>
+  <p>3 rd BTECH </p>
+  <a href="https://www.linkedin.com/feed/?trk=onboarding-landing"><i class="fa fa-linkedin" style="color:blue"></i></a> &nbsp;&nbsp;
+  
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\shubham.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shubham Chaudhary</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/shubham-chaudhary-68037213b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\abhinandan.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Abhinandan Mishra</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/abhinandan-mishra-89b019169"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\shubhangi_rathi.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shubhangi </b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/shubhangi-rathi-31a01a145"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div><div class="row justify-content-md-center">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\krishna.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Krishna Katiyar</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/krishna-katiyar-409055170"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\shardendu.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shardendu</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/shardendu-awasthi-885118168"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+  
+<br><br>
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;">PUBLICITY</font></h1></center></center>
+
+<div class="card">
+  <img src="assets\images\mohit_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1>Mohit Ojha</h1>
+  <p class="title">Head:- Publicity</p>
+  <p>3 rd BTECH </p>
+  <a href="https://www.linkedin.com/in/mohit-ojha-62648816b"><i class="fa fa-linkedin" style="color:blue"></i></a> &nbsp;&nbsp;
+  
+  <p><button class="but"> Contact </button></p>
+</div>
+</div>
+<br>
+<div class="row justify-content-md-center">
+ 
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\dhruv.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Dhruv Kaul</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/dhruv-kaul-7a19a414b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\prashant.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Prashant Mishra</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/prashant-verma-b1b6b4129"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ </div>
+ <br>
+ <br>
+ <div class="row">
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\nitesh.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Nitesh Ahuja</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/nitesh-ahuja-a14682164"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\sneha.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Sneha Mishra</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/nitesh-ahuja-a14682164"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+
+<br><br>
+
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;">DESIGN</font></center></h1>
+<div class="card">
+  <img src="assets/images/rishu_sir.jpg" alt="Unknown" style="width:100%">
+  <div class="container">
+  <h1> Rishu Trivedi</h1>
+  <p class="title">Head:- Design </p>
+  <p>3 rd BTECH</p>
+  <a href="https://in.linkedin.com/in/rishu-trivedi-b44b70125"><i class="fa fa-linkedin" style="color:blue"></i></a> &nbsp;&nbsp;
+  
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+
+<br>
+<div class="row">
+
+  
+  
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\shivam.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Shivam Verma</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/shivam-verma-77793a16b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\richa.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Richa</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/richa-sharma-0a272316b/"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\amit.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Amit Gupta</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/amit-g-016348b3/"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+
+<br>
+
+
+
+<br><br>
+
+
+
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+
+<br><br>
+
+<h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;"> CONTENT WRITING </font> </center></h1>
+<div class="card">
+  <img src="assets\images\sonia_mam.jpg" alt="Sonia Malik" style="width:100%">
+  <div class="container">
+  <h1>Sonia Malik</h1>
+  <p class="title">Head:- Content Writing</p>
+  <p>3 rd BTECH</p>
+  <a href="#"><i class="fa fa-linkedin" style="color:blue""></i></a> &nbsp;&nbsp;
+  <a href="#"></a> 
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+<br><div class="row">
+<div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\Mohd.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Mohd. Abid</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/mohd-abid-71971016b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  
+  
+  
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\vaishnavi.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Vaishnavi Vishwakarma </b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/vaishnavi-vishwakarma-20957b14b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
+  
+  <h1 class="heading"><center><font size="6" style="font-family: 'Audiowide', cursive;"> Talk Coordination </font></center></h1>
+  <div class="card">
+  <img src="assets\images\avinash_sir.jpg" alt="Sonia Malik" style="width:100%">
+  <div class="container">
+  <h1>Avinash Shukla</h1>
+  <p class="title">Head:- Talk Coordination</p>
+  <p>3 rd BTECH</p>
+  <a href="#"><i class="fa fa-linkedin" style="color:blue""></i></a> &nbsp;&nbsp;
+  <a href="#"></a> 
+  <p><button class="but">Contact</button></p>
+</div>
+</div>
+  <div class="row">
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\akarsh.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Akarsh Mishra</b> <br><br> 
+    <center>
+    <a href="//"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\2.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Deepak Awasthi</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/tushar-singh-aa6a9916a"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+</div>
+<br>
+<div class="row">
+  <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\vikrant.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Vikrant Singh</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/vikrant-singh-83298714b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+ <div class="column">
+    
+<div class="imgside">
+  <img src="assets\images\tushar.jpg" alt="Unknown" class="image">
+  <div class="middle">
+    <div class="text"><b>Tushar Singh</b> <br><br> 
+    <center>
+    <a href="https://www.linkedin.com/in/mohd-abid-71971016b"><i class="fa fa-linkedin"style="color:blue">&nbsp;&nbsp;</i></a> 
+   
+    </center>
+    
+    
+    </div>
+  </div>
+</div>
+ </div>
+ 
+</div>
+  
+    </section>
+	<br>
+	<br>
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                    <p class="copywrite-text"><a href="#">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | With Ayush Kumar.
+</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav">
+                        <ul>
+                            <li>
+							<a href="index.html">Home</a></li>
+                                    <li><a href="index.html#vision">Our Vision</a></li>
+                                    <li><a href="index.html#archives"> Archives</a></li>
+                                    <li><a href="index.html#upcoming">Upcoming Events</a></li>
+                                    <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>

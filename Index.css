@@ -1,0 +1,117 @@
+#jumbo{
+	background-image: url("images/giiec.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: -1;
+	margin-left: 100px;
+	width: 1100px;
+	border-radius: 15px;
+	margin-top: 20px;
+}
+.display-4{
+  font-size: 3em;
+  color: rgb(8,2,30);
+}
+.lead{
+	font-size: 2.5em;
+	padding-bottom: 4px;
+	color: rgb(22,53,38);
+}
+.img{
+		width:200px;
+		height:200px;
+		margin-left:150px;
+		margin-top: 4em;
+		border-radius: 15px;
+}
+.intent2{
+	margin-left: 150px;
+	padding-top:3em; 
+	font-size: 1em;
+  	color: rgb(8,2,30);
+}
+.incub2{
+	margin-left: 150px;
+	font-size: 1em;
+	padding-bottom: 4px;
+	color: rgb(22,53,38);
+}
+.intent1{
+	margin-left: 50px;
+	padding-top:3em; 
+	font-size: 1em;
+  	color: rgb(8,2,30);
+}
+.incub1{
+	margin-left: 50px;
+	font-size: 1em;
+	padding-bottom: 4px;
+	color: rgb(22,53,38);
+}
+.intent{
+	margin-left: 50px;
+	padding-top:3em; 
+	font-size: 1em;
+  	color: rgb(8,2,30);
+}
+.incub{
+	margin-left: 50px;
+	font-size: 1em;
+	padding-bottom: 4px;
+	color: rgb(22,53,38);
+}
+.img1{
+		width:200px;
+		height:200px;
+		margin-left:50px;
+		border-radius: 15px;
+		margin-top: 4em;
+}
+.imgs{
+	background-image: url("images/community.jpg");
+	background-size: cover;
+	padding: 100px;
+	padding-left: 300px; 
+}
+#nav{
+	margin-left: 100px;
+	width: 1100px;
+	margin-bottom: 3em;
+	border-radius: 15px;
+}
+.foot{
+	background-color: black;
+	color: white;
+	width: 1350px;
+	height: 50px;
+	font-family: 'Times New Roman';
+	padding-left: 600px;
+	padding-top: 4px;
+}
+.image{
+	width:50px;
+	height:50px;
+}
+.image1{
+	width:40px;
+	height:30px;
+	padding-right: 10px;
+}
+.image2{
+	width:40px;
+	height:40px;
+}
+.footer{
+	margin-left: 100px;
+	margin-top: 3em;
+	color: green;
+}
+.connect{
+	padding-left: 10px;
+}
+.ipsum{
+	font-family: 'Bree Serif', serif;
+}
+.main{
+	color: white;
+}
