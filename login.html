@@ -295,7 +295,7 @@
               <p> <b>Registration fee: Rs. 200.&nbsp;&nbsp;&nbsp; Accomodation fee: Rs 800. &nbsp;&nbsp; </p>
 
               <!-- Login Form -->
-              <div class="login-form">
+              <div class="login-form" id="registration_form">
                 <form action="#" method="post">
                   <div class="form-group">
                     <label>Name</label>
@@ -304,10 +304,10 @@
 
                   <div class="form-group">
                     <label>College</label><br>
-                    <input type="radio" onchange="collegeAdded()" name="college" id="college" required value="HBTU">&nbsp;&nbsp;HBTU<br>
+                    <input type="radio" onchange="collegeAdded()" name="college" id="college" checked required value="HBTU">&nbsp;&nbsp;HBTU<br>
                     <input type="radio" onchange="collegeAdded()" name="college" id="college" required value="Other">&nbsp;&nbsp;Other<br>
                   </div>
-                  <div class="form-group" id="collegeName">
+                  <div class="form-group" id="collegeName" style="display:none">
                     <label>Name of the college</label>
                     <input type="text" id="collegename" class="form-control" required placeholder="College Name">
                   </div>
@@ -318,40 +318,37 @@
 
                   <div class="form-group">
                     <label>Email address</label>
-                    <input type="text" id="email" class="form-control" required placeholder="Enter E-mail">
+                    <input type="email" id="email" class="form-control" required placeholder="Enter E-mail">
                     <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
                   </div>
 
                   <div class="form-group">
                     <label>Phone No.</label>
                     <input type="number" id="phone" class="form-control" required placeholder="Enter Mobile No.">
-                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your phone with anyone else.</small>
                   </div>
 
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" id="password" class="form-control" required placeholder="Password">
+                    <input type="password" id="password" class="form-control" required placeholder="Password" pattern=".{6,}" title="password has to be minimum 6 characters long">
+                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>The password should be atleast 6 characters long</small>
                   </div>
 
-                  <div class="form-group" id="accomodationForOthers">
+                  <div class="form-group" id="accomodationForOthers" style="display:none" >
                     <label>Accomodation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <!-- <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>Payment Links will be mailed to you soon.</small> -->
-                    <select id="accomodation" onchange="getValueIndi()">
-                      <option value="choose">Choose</option>
+                    <select id="accomodation" onchange="getValueIndi()" title="choose">
                       <option value="yes">YES</option>
                       <option value="no">NO</option>
                     </select>
                   </div>
-                  <button type="submit" style="display:none" class="btn oneMusic-btn mt-30" id="button_register_hbtu" onclick="create()">Register</button><br><br>
+                  <button type="submit"  class="btn oneMusic-btn mt-30" id="button_register_hbtu" onclick="">Register</button><br><br>
                   <!-- <button type="submit" class="btn oneMusic-btn mt-30" id="button_login" onclick="login_func()">Login</button> -->
                   <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
                   <!-- <button type="submit" class="btn oneMusic-btn mt-30" id="button_register" onclick="contingent()">Contingent Registration</button> -->
 
-
-                  <a href="index.html">
                     <!-- <div id="goback_button"><br></div> -->
                   </a>
-                  <a href="accy.html">
+
                     <div style="display:none" id="accomodation_yes"><br>
 
                       <script src="https://js.instamojo.com/v1/checkout.js"></script>
@@ -360,7 +357,7 @@
                         Payment for Registration and Accomodation
                       </button>
                     </div>
-                  </a>
+
 
                   <a href="accn.html">
                     <div style="display:none" id="accomodation_no"><br>
@@ -370,6 +367,7 @@
                       <button class="btn oneMusic-btn mt-30" onclick="onNoAccomodationPayment()">
                         Payment for Registration
                       </button>
+
                   </a>
 
               </div>
