@@ -112,7 +112,7 @@ function create() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       alert("student registration successful, please proceed to events registration");
-      document.getElementById('home').click();
+      //document.getElementById('home').click();
       //window.location.href = "index.html";
     }
   });
