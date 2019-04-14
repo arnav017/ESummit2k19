@@ -104,8 +104,11 @@ function create() {
   var name = document.getElementById("name").value;
   var college = document.querySelector('input[name="college"]:checked').value;
   var phone = document.getElementById("phone").value;
+  var rollnumber;
   if (college == "Other") {
     college = document.getElementById("collegename").value;
+  }else{
+    rollnumber = document.getElementById("rollnumber").value;
   }
 
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -117,14 +120,6 @@ function create() {
   }).then(function verification() {
     var user = firebase.auth().currentUser;
 
-    // user.sendEmailVerification().then(function() {
-    //   // Email sent.
-    //   window.alert("Successfully Registered. Verification Mail Sent, Please Verify Your E-mail");
-    // }).catch(function(error) {
-    //   console.log(error);
-    // });
-
-
     console.log(name);
     user.updateProfile({
       displayName: name
@@ -134,43 +129,30 @@ function create() {
       // An error happened.
     });
 
-
     console.log(college + email);
     var database = firebase.database();
     var ref = database.ref("individual");
-    var detail = {
-      name: name,
-      email: user.email,
-      college: college,
-      phone: phone,
-      accomodation: window.indiaccomodation
+    if (college == "Other") {
+      var detail = {
+        name: name,
+        email: user.email,
+        college: college,
+        phone: phone,
+        accomodation: window.indiaccomodation
+      }
+    }else{
+      var detail = {
+        name: name,
+        email: user.email,
+        college: college,
+        phone: phone,
+        rollnumber : rollnumber
+      }
     }
+
     ref.push(detail);
-
-
-
   });
 
-  // var n = window.indiaccomodation.localeCompare("yes");
-  //
-  //
-  // if(n==0)
-  // {
-  // 	a = document.getElementById("accomodation_yes");
-  // 	b = document.createElement("button");
-  // 	b.setAttribute("class","btn oneMusic-btn mt-30");
-  // 	c = document.createTextNode("Continue for payment");
-  // 	b.appendChild(c);
-  // 	a.appendChild(b);
-  // }
-  // else{
-  // 	a = document.getElementById("accomodation_no");
-  // 	b = document.createElement("butgetValueInditon");
-  // 	b.setAttribute("class","btn oneMusic-btn mt-30");
-  // 	c = document.createTextNode("Continue for payment");
-  // 	b.appendChild(c);
-  // 	a.appendChild(b);
-  // }
   window.location.href = "index.html	";
 }
 
@@ -180,67 +162,6 @@ function getValue() {
 
   window.accomo = document.getElementById("leaderaccomodation").value;
   console.log(accomo);
-}
-
-function contiCreate() {
-  var leaderemail = document.getElementById("leaderemail").value;
-  var leaderpassword = document.getElementById("leaderpassword").value;
-  var leadername = document.getElementById("leadername").value;
-  var conticollege = document.getElementById("conticollege").value;
-  var leaderphone = document.getElementById("leaderphone").value;
-  var memberemail = " ";
-  for (j = 1; j < i; j++) {
-    var mail = document.getElementById("memberemail" + (j)).value;
-    memberemail += mail + " ";
-  }
-  console.log(memberemail);
-  firebase.auth().createUserWithEmailAndPassword(leaderemail, leaderpassword).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-    window.alert("Error : " + errorMessage);
-  }).then(function verification() {
-    var user = firebase.auth().currentUser;
-
-    user.sendEmailVerification().then(function() {
-      // Email sent.
-      window.alert("Verification Sent, Please Verify Your E-mail");
-    }).catch(function(error) {
-      console.log(error);
-    });
-
-
-    console.log(leadername);
-    user.updateProfile({
-      displayName: leadername
-    }).then(function() {
-      // Update successful.
-    }).catch(function(error) {
-      // An error happened.
-    });
-
-
-    console.log(leadername);
-    var database = firebase.database();
-    var ref = database.ref("contingent");
-    var detail = {
-      leadername: leadername,
-      leaderemail: user.email,
-      conticollege: conticollege,
-      leaderphone: leaderphone,
-      memberemail: memberemail,
-      accomodation: window.accomo
-
-    }
-    ref.push(detail);
-    a = document.getElementById("goback_button_conti");
-    b = document.createElement("button");
-    b.setAttribute("class", "btn oneMusic-btn mt-30");
-    c = document.createTextNode("Go Back");
-    b.appendChild(c);
-    a.appendChild(b);
-  });
 }
 
 function collegeAdded() {
@@ -311,33 +232,44 @@ function pay() {
 }
 
 function onNoAccomodationPayment() {
-  validate();
-  pay();
-  Instamojo.open('https://www.instamojo.com/@ecellhbtu/l490298cda7754e4aa4b044fd7b962b2a/');
+  if (validate()) {
+    pay();
+    Instamojo.open('https://www.instamojo.com/@ecellhbtu/l490298cda7754e4aa4b044fd7b962b2a/');
+  }
 }
 
 function onYesAccomodationPayment() {
-  validate();
-  pay();
-  Instamojo.open('https://www.instamojo.com/@ecellhbtu/l49cb7732206942c492b4f3e707fd50aa/');
+  if (validate()) {
+    validate();
+    pay();
+    Instamojo.open('https://www.instamojo.com/@ecellhbtu/l49cb7732206942c492b4f3e707fd50aa/');
+  }
 }
 
 function validate() {
   var name = document.getElementById("name").value;
   var college = document.getElementById("collegename").value;
+  var collegeSelection = document.querySelector('input[name="college"]:checked').value;
+  var rollnumber = document.getElementById("rollnumber").value;
   var email = document.getElementById("email").value;
-  var phone = document.getElementById("leaderphone").value;
+  var phone = document.getElementById("phone").value;
   var password = document.getElementById("password").value;
+
   if (name == "") {
     console.log(name);
     alert("Please provide your name!");
-    name.focus();
     return false;
   }
-  if (college == "") {
+  if (collegeSelection == "Other" && college == "") {
     console.log(name);
     alert("Please provide your college name!");
-    name.focus();
+    return false;
+  } else if (collegeSelection == "HBTU" && rollnumber.length < 1) {
+    alert("Please enter your roll number!");
+    return false;
+  }
+  if (phone.length < 1) {
+    alert("Please provide your phone!");
     return false;
   }
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
@@ -349,7 +281,6 @@ function validate() {
   if (password == "") {
     console.log(name);
     alert("Please enter a suitable password!");
-    name.focus();
     return false;
   }
   if (password.length < 6) {
@@ -359,4 +290,52 @@ function validate() {
   }
 
   return (true);
+}
+
+function checkHbtuStudentDetails() {
+  if (validate()) {
+    let rollnumber = document.getElementById('rollnumber').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+
+    let xhr = new XMLHttpRequest;
+    let url = 'erp.php?rollnumber=' + rollnumber;
+    xhr.open('GET', url);
+
+    xhr.onload = function() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          try {
+            let res = this.responseText;
+            let trimmedRes = res.substring(1, res.length - 1);
+
+            let responsejson = JSON.parse(trimmedRes);
+
+            console.log(email + phone + responsejson.email + responsejson.phone + responsejson.altContact);
+            if (responsejson.email == email) {
+              if (responsejson.phone == phone || responsejson.altContact == phone) {
+                //when everything is correct..register the student
+                create();
+              } else {
+                alert('phone number entered doesnt match HBTU database');
+              }
+            } else {
+              alert('email entered doesnt match HBTU database');
+            }
+          } catch (e) {
+            alert("Entered roll number is not registered in HBTU-ERP records");
+            console.log("exception in parsing" + e);
+          }
+        } else if (xhr.status == 400) {
+          alert('error code:400');
+        } else if (xhr.status == 410) {
+          alert('unexpected error, contact support');
+        }
+      } else {
+        console.log("Error state is " + xhr.readyState + " with status code = " + xhr.status);
+      }
+
+    }
+    xhr.send();
+  }
 }

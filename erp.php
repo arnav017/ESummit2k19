@@ -1,5 +1,12 @@
 <?php
-$curl_h = curl_init('https://erp.hbtu.ac.in/api/2.2/EP1?rollno=1604510017');
+if($_GET['rollnumber']!=""){
+  $rollnumber = $_GET['rollnumber'];
+}else{
+  $rollnumber='-1';
+}
+//$rollnumber = $_GET['rollnumber'];
+$url = 'https://erp.hbtu.ac.in/api/2.2/EP1?rollno='.$rollnumber;
+$curl_h = curl_init($url);
 
 curl_setopt($curl_h, CURLOPT_HTTPHEADER,
     array(
@@ -8,7 +15,7 @@ curl_setopt($curl_h, CURLOPT_HTTPHEADER,
 );
 
 # do not output, but store to variable
-curl_setopt($curl_h, CURLOPT_RETURNTRANSFER, true);
+//curl_setopt($curl_h, CURLOPT_RETURNTRANSFER, true);
 
 $response = curl_exec($curl_h);
 $trimmedResponse = trim($response, '[]');
@@ -21,10 +28,4 @@ $firstName =  $responseArray["firstName"];
 $lastName =  $responseArray["lastName"];
 $email =  $responseArray["email"];
 $phone =  $responseArray["phone"];
-
-
-echo $firstName." ".$lastName." ".$email." ".$phone." ";
-// foreach ($b as $key => $value) {
-//     echo "Key: $key; Value: $value\n";
-// }
 ?>
