@@ -3,7 +3,6 @@ var j;
 
 
 
-
 function login_func() {
   document.getElementById("registration").style.display = "none";
   document.getElementById("login").style.display = "block";
@@ -110,7 +109,13 @@ function create() {
   }else{
     rollnumber = document.getElementById("rollnumber").value;
   }
-
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      alert("student registration successful, please proceed to events registration");
+      document.getElementById('home').click();
+      //window.location.href = "index.html";
+    }
+  });
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -139,7 +144,7 @@ function create() {
         college: college,
         phone: phone,
         accomodation: window.indiaccomodation
-      }
+        }
     }else{
       var detail = {
         name: name,
@@ -149,17 +154,13 @@ function create() {
         rollnumber : rollnumber
       }
     }
-
+console.log(detail);
     ref.push(detail);
+    //.then(alert("registration successful, please proceed to events page"));
   });
-
-  window.location.href = "index.html	";
 }
 
-
-
 function getValue() {
-
   window.accomo = document.getElementById("leaderaccomodation").value;
   console.log(accomo);
 }
@@ -234,7 +235,7 @@ function pay() {
 function onNoAccomodationPayment() {
   if (validate()) {
     pay();
-    Instamojo.open('https://www.instamojo.com/@ecellhbtu/l490298cda7754e4aa4b044fd7b962b2a/');
+    Instamojo.open('https://www.instamojo.com/@esummithbtu/l15732231dec04985926a2bba6a6a98b4/');
   }
 }
 
@@ -242,7 +243,7 @@ function onYesAccomodationPayment() {
   if (validate()) {
     validate();
     pay();
-    Instamojo.open('https://www.instamojo.com/@ecellhbtu/l49cb7732206942c492b4f3e707fd50aa/');
+    Instamojo.open('https://www.instamojo.com/@esummithbtu/l42b5a7e68a0c494c9f6dc8e94426eab2/');
   }
 }
 
@@ -294,48 +295,49 @@ function validate() {
 
 function checkHbtuStudentDetails() {
   if (validate()) {
-    let rollnumber = document.getElementById('rollnumber').value;
-    let email = document.getElementById('email').value;
-    let phone = document.getElementById('phone').value;
-
-    let xhr = new XMLHttpRequest;
-    let url = 'erp.php?rollnumber=' + rollnumber;
-    xhr.open('GET', url);
-
-    xhr.onload = function() {
-      if (xhr.readyState == 4) {
-        if (xhr.status == 200) {
-          try {
-            let res = this.responseText;
-            let trimmedRes = res.substring(1, res.length - 1);
-
-            let responsejson = JSON.parse(trimmedRes);
-
-            console.log(email + phone + responsejson.email + responsejson.phone + responsejson.altContact);
-            if (responsejson.email == email) {
-              if (responsejson.phone == phone || responsejson.altContact == phone) {
-                //when everything is correct..register the student
-                create();
-              } else {
-                alert('phone number entered doesnt match HBTU database');
-              }
-            } else {
-              alert('email entered doesnt match HBTU database');
-            }
-          } catch (e) {
-            alert("Entered roll number is not registered in HBTU-ERP records");
-            console.log("exception in parsing" + e);
-          }
-        } else if (xhr.status == 400) {
-          alert('error code:400');
-        } else if (xhr.status == 410) {
-          alert('unexpected error, contact support');
-        }
-      } else {
-        console.log("Error state is " + xhr.readyState + " with status code = " + xhr.status);
-      }
-
-    }
-    xhr.send();
+    // let rollnumber = document.getElementById('rollnumber').value;
+    // let email = document.getElementById('email').value;
+    // let phone = document.getElementById('phone').value;
+    //
+    // let xhr = new XMLHttpRequest;
+    // let url = 'erp.php?rollnumber=' + rollnumber;
+    // xhr.open('GET', url);
+    //
+    // xhr.onload = function() {
+    //   if (xhr.readyState == 4) {
+    //     if (xhr.status == 200) {
+    //       try {
+    //         let res = this.responseText;
+    //         let trimmedRes = res.substring(1, res.length - 1);
+    //
+    //         let responsejson = JSON.parse(trimmedRes);
+    //
+    //         console.log(email + phone + responsejson.email + responsejson.phone + responsejson.altContact);
+    //         if (responsejson.email == email) {
+    //           if (responsejson.phone == phone || responsejson.altContact == phone) {
+    //             //when everything is correct..register the student
+    //             create();
+    //           } else {
+    //             alert('phone number entered doesnt match HBTU database');
+    //           }
+    //         } else {
+    //           alert('email entered doesnt match HBTU database');
+    //         }
+    //       } catch (e) {
+    //         alert("Entered roll number is not registered in HBTU-ERP records");
+    //         console.log("exception in parsing" + e);
+    //       }
+    //     } else if (xhr.status == 400) {
+    //       alert('error code:400');
+    //     } else if (xhr.status == 410) {
+    //       alert('unexpected error, contact support');
+    //     }
+    //   } else {
+    //     console.log("Error state is " + xhr.readyState + " with status code = " + xhr.status);
+    //   }
+    //
+    // }
+    //xhr.send();
+    create();
   }
 }
