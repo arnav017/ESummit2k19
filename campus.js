@@ -67,14 +67,6 @@ function login() {
       window.location.href = "index.html";
     }
   });
-
-  //no need of creating a go-back button
-  // a = document.getElementById("goback_button_login");
-  // b = document.createElement("button");
-  // b.setAttribute("class","btn oneMusic-btn mt-30");
-  // c = document.createTextNode("Go Back");
-  // b.appendChild(c);
-  // a.appendChild(b);
 }
 
 
@@ -103,11 +95,15 @@ function create() {
   var name = document.getElementById("name").value;
   var college = document.querySelector('input[name="college"]:checked').value;
   var phone = document.getElementById("phone").value;
-  var rollnumber;
+  var rollnumber = 0;
   if (college == "Other") {
+    console.log("first its other");
     college = document.getElementById("collegename").value;
+    accomodation = window.indiaccomodation;
   }else{
+    console.log("first its hbtu");
     rollnumber = document.getElementById("rollnumber").value;
+    accomodation = 'not applicable';
   }
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -137,7 +133,9 @@ function create() {
     console.log(college + email);
     var database = firebase.database();
     var ref = database.ref("individual");
-    if (college == "Other") {
+
+    if (college != "HBTU") {
+      console.log("other regn");
       var detail = {
         name: name,
         email: user.email,
@@ -146,12 +144,14 @@ function create() {
         accomodation: window.indiaccomodation
         }
     }else{
+      console.log("hbtu regn");
       var detail = {
         name: name,
         email: user.email,
         college: college,
         phone: phone,
-        rollnumber : rollnumber
+        rollnumber : rollnumber,
+        accomodation : accomodation
       }
     }
 console.log(detail);
@@ -236,6 +236,15 @@ function onNoAccomodationPayment() {
   if (validate()) {
     pay();
     Instamojo.open('https://www.instamojo.com/@esummithbtu/l15732231dec04985926a2bba6a6a98b4/');
+  }
+}
+
+function onNoAccomodationPaymentTest() {
+  //testing
+  if (validate()) {
+    create();
+  //  pay();
+    //Instamojo.open('https://www.instamojo.com/@esummithbtu/ld21c8c4d1e204710961d4851b23ec7a3/');
   }
 }
 
